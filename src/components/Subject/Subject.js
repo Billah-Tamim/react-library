@@ -1,7 +1,7 @@
 import React from 'react';
 import './Subject.css';
 
-const Subject = ({subject}) => {
+const Subject = ({subject, getSubject}) => {
     const {name, picture, addition, about, time} = subject;
     return (
         <div className='subject-container'>
@@ -12,7 +12,7 @@ const Subject = ({subject}) => {
                 <p>Books Addition: {addition}</p>
                 <p>Time Required: {time} minutes</p>
             </div>
-            <button>Add to List</button>
+            <button onClick={()=>getSubject(subject)}>Add to List</button>
         </div>
     );
 };

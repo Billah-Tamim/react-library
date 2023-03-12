@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Card.css';
 
-const Card = () => {
+const Card = ({work}) => {
+    let time = 0;
+    const [tBreak, setTBreak]= useState(0);
+    for(const single of work){
+        time = time + (single.time * single.quantity);
+    }
+    const getBreak = breakTime =>{
+        setTBreak(tBreak+breakTime);
+    }
     return (
         <div className='card-container'>
             <div className="parsonal-info">
@@ -21,25 +29,25 @@ const Card = () => {
                     <p>Height</p>
                 </div>
                 <div className="age">
-                    <h4>25 years</h4>
+                    <h4>23 years</h4>
                     <p>Age</p>
                 </div>
             </div>
             <h3>Add a brake time</h3>
             <div className="time">
-                <button>5m</button>
-                <button>10m</button>
-                <button>15m</button>
-                <button>30m</button>
+                <button onClick={()=>getBreak(5)}>5m</button>
+                <button onClick={()=>getBreak(10)}>10m</button>
+                <button onClick={()=>getBreak(15)}>15m</button>
+                <button onClick={()=>getBreak(20)}>30m</button>
             </div>
             <h3>Reading Info</h3>
             <div className="reading">
                 <p>Reading Time</p>
-                <p>000000 minutes</p>
+                <p>{time} minutes</p>
             </div>
             <div className="break">
                 <p>Break Time</p>
-                <p>000000 minutes</p>
+                <p>{tBreak} minutes</p>
             </div>
             <button className='complete'>Reading Completed</button>
         </div>

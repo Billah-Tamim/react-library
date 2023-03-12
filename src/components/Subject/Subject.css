@@ -1,0 +1,35 @@
+.subject-container{
+    width: 250px;
+    height: 470px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    position: relative;
+}
+.details{
+    padding: 10px;
+}
+img{
+    width: 230px;
+    height: 140px;
+    border-radius: 10px;
+}
+small{
+    color: lightslategray;
+}
+.subject-container button{
+    width: 250px;
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color:rgb(8, 76, 135);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(3, 19, 97);
+}
+.details p{
+    margin-top: 10px;
+}

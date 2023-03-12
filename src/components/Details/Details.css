@@ -1,0 +1,29 @@
+.details-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.subjects-details{
+    margin:0 50px;
+}
+.details-title{
+    margin-left: 10px;
+    color: rgb(98, 98, 98);
+}
+.subjects-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+    .subjects-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .subjects-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+  }

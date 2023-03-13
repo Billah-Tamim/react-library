@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# live ling of this website [Click here to see the website](https://hilarious-kringle-d01c96.netlify.app/).
 
 ## Available Scripts
 
